@@ -1,8 +1,8 @@
-# Trungquandev CV Online
-View Live Preview - https://cv.maihuy.com
+# Mai Huy Porfolio
+View Live Preview - [https://cv.maihuy.com](https://maihuy-dataguy.github.io/portfolio/)
 
 ## Demo
-![maihuy-cv-online](https://github.com/trungquandev/cv.trungquandev.com/blob/873d04c30cf6d2c4865b75f869ab4aec77d2bdda/public/img/demo-cv.png)
+![maihuy-cv-online](https://github.com/maihuy-dataguy/portfolio/blob/main/public/img/demo-cv.png)
 
 ## Credit
 This repo is based on [Start Bootstrap - Resume!](https://github.com/StartBootstrap/startbootstrap-resume)
@@ -10,7 +10,7 @@ This repo is based on [Start Bootstrap - Resume!](https://github.com/StartBootst
 ## Signature
 Author: Mai Huy
 
-Portfolio: https://cv.maihuy.com
+Portfolio: ![maihuy-cv-online](https://github.com/maihuy-dataguy/portfolio/blob/main/public/img/demo-cv.png)
 
 "Perfection is not attainable. But if we chase perfection, we can catch excellence."
 
