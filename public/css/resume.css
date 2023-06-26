@@ -117,7 +117,7 @@ img.subheading-icon {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    width: 18rem;
+    width: 17rem;
     height: 100vh;
   }
   #sideNav .navbar-brand {
