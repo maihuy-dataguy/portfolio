@@ -1,5 +1,5 @@
 # Mai Huy Porfolio
-View Live Preview - [https://cv.maihuy.com](https://maihuy-dataguy.github.io/portfolio/)
+View Live Preview - https://maihuy-dataguy.github.io/portfolio
 
 ## Demo
 ![maihuy-cv-online](https://github.com/maihuy-dataguy/portfolio/blob/main/public/img/demo-cv.png)
@@ -10,7 +10,7 @@ This repo is based on [Start Bootstrap - Resume!](https://github.com/StartBootst
 ## Signature
 Author: Mai Huy
 
-Portfolio: ![maihuy-cv-online](https://github.com/maihuy-dataguy/portfolio/blob/main/public/img/demo-cv.png)
+Portfolio: https://maihuy-dataguy.github.io/portfolio
 
 "Perfection is not attainable. But if we chase perfection, we can catch excellence."
 
