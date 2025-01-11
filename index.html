@@ -35,6 +35,7 @@
 
   </head>
 
+
   <body id="page-top">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top"> -->
@@ -58,6 +59,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" style="color: #000;" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" style="color: #000;" href="#personal_project">Project</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" style="color: #000;" href="#education">Education</a>
@@ -102,7 +106,7 @@
           
           <p class="lead mb-2">
             <strong style="color: #079992;"><i class='fas fa-warehouse' style="color: #ff8c00;"></i> Data Storage:</strong>
-            I am experienced in some <strong>OLAP</strong> model like <strong> Clickhouse, Snowflake, Google Bigquery, etc.</strong>
+            I am experienced in some <strong>OLAP</strong> model like <strong> Clickhouse, DataBricks, Delta Lake, etc.</strong>
             I have background understanding in <strong> Data Modeling</strong> of <strong>Data Warehouse</strong>, and an overview knowlegde of <strong>DBMS management.</strong> 
           </p>
           <p class="lead mb-2">
@@ -110,11 +114,20 @@
            Compute <strong>(Lambda, EC2)</strong>, Storage <strong> (S3)</strong>, Database<strong> (RDS, DynamoDB).</strong>
           </p>
           <p class="lead mb-2">
+            <strong style="color: #079992;">
+              <i class = "devicon-azure-plain" style="color: #ff8c00;"></i> Microsoft Azure:
+            </strong> 
+            Data Ingestion <strong>(Azure Data Factory)</strong>, 
+            Storage <strong> (Azure Data Lake)</strong>, 
+            LakeHouse Architecture<strong> (Azure DataBricks)</strong>,
+            LakeHouse<strong> (Delta Lake).</strong>
+          </p>
+          <p class="lead mb-2">
             <strong style="color: #079992;"><i class="devicon-apache-plain-wordmark" style="color: #ff8c00; font-size: 22px;"></i> Distributed Computing:</strong><strong> Spark, Hadoop.</strong>
           </p>
           <p class="lead mb-2">
             <strong style="color: #079992;"><i class="devicon-spring-plain" style="color: #ff8c00;font-size: 20px;"></i> API Development:</strong>
-            <strong> Flask, FastAPI, Spring, Netty.</strong>
+            <strong> Flask, FastAPI.</strong>
           </p>
           <p class="lead mb-2">
             <strong style="color: #079992;"><i class="devicon-docker-plain" style="color: #ff8c00;font-size: 22px;"></i> Container:</strong>
@@ -263,6 +276,95 @@
 
       <hr class="m-0" style="border-top: 1px dotted #ff8c00">
 
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="personal_project">
+        <div class="my-auto">
+          <h2 class="mb-5">Personal Project</h2>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">
+                <a href="https://github.com/maihuy-dataguy/Azure-Databricks-NYC-Taxi-project" target="blank">
+                  Azure Databricks NYC Taxi project
+                </a>
+              </h3>
+              <div class="subheading mb-3" style="color: #ff8c00;" >
+                System architecture
+              </div>
+              <img src="public/img/flow_NYC-azure.png"  width="1000" height="500">
+              <hr>
+              <div class="subheading mb-3">
+                The project is designed with the following components:
+              </div>
+              <div class="mb-2">
+                <i class="fa-custom-list fa fa-bookmark text-warning"></i>&nbsp;
+                <strong> Data Source:</strong>
+                We use 2 files taxi_zone_lookup.csv and trip_type.csv alongside with NYC-Taxi trip data API from 
+                <a href="https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page" 
+                style="color: azure;text-decoration:underline;font-weight: bold;">here</a> for our pipeline.
+              </div>
+              <div class="mb-2">
+                <i class="fa-custom-list fa fa-bookmark text-warning"></i>&nbsp;
+                 <strong>Azure Data Factory (ADF): </strong>
+                 Responsible for ingesting data and storing fetched data in azure data lakehouse at bronze layer, 
+                 implenmenting parameterized pipeline to fully fetch 12-months data in 2023.
+              </div>
+              <div class="mb-2">
+                <i class="fa-custom-list fa fa-bookmark text-warning"></i>&nbsp;
+                 <strong>Databricks Lakehouse: </strong>
+                 Using medallion architecture, we transfer our data between these layers including bronze, 
+                 silver, gold layers
+                  <div class="m-2">
+                    <strong>+ Bronze layer: </strong>
+                    Used for storing raw data ingested from ADF.
+                  </div>
+                  <div class="m-2">
+                    <strong>+ Silver layer: </strong>
+                    Used for storing transformed data (parquet format) through spark using databrick notebook.
+                  </div>
+                  <div class="m-2">
+                    <strong>+ Gold layer: </strong>
+                    Used for storing transformed (delta format), 
+                    creating delta tables on top of data, 
+                    thanks to transactional log created from delta lake, 
+                    using sql (sparkSQL) to query data for auditing, 
+                    reports in combination with data versioning and time travel to 
+                    enhance ACID features and data integrity in azure data lake.
+                  </div>
+              </div>
+
+
+              <div class="mb-2">
+                <i class="fa-custom-list fa fa-bookmark text-warning"></i>&nbsp;
+                 <strong>Securiy: </strong>
+                 Using secret key, grant access service princle application as storage data contributor.
+                </a>
+              </div>
+              <div class="mb-0">
+                <i class="fa-custom-list fa fa-bookmark text-warning"></i>&nbsp;
+                 <strong>Power BI: </strong>
+                 For creating dashboards to support related reports.
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- <div class="resume-item d-flex flex-column flex-md-row">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">James Buchanan High School</h3>
+              <div class="subheading mb-3">Technology Magnet Program</div>
+              <p>GPA: 3.56</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">August 2002 - May 2006</span>
+            </div>
+          </div> -->
+
+        </div>
+      </section>
+
+      <hr class="m-0" style="border-top: 1px dotted #ff8c00">
+
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
           <h2 class="mb-5">Education</h2>
@@ -399,6 +501,10 @@
             <li>
               <i class="fa-li fa fa-check"></i>
               Amazon Web Services
+            </li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Microsoft Azure
             </li>
             <li>
               <i class="fa-li fa fa-check"></i>
